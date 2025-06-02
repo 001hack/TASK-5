@@ -1,0 +1,111 @@
+# Wireshark Packet Capture Analysis
+
+This guide walks through the steps to capture network traffic using **Wireshark** on **Kali Linux** and analyze different protocols, providing a summary of the captured data.
+
+---
+
+## 1. **Install Wireshark**
+
+Since **Wireshark** is **pre-installed** on Kali Linux, there's no need to install it. If it's not already installed for some reason, you can install it by running the following commands:
+
+```bash
+sudo apt update
+sudo apt install wireshark
+````
+
+If Wireshark is already installed, skip this step.
+
+---
+
+## 2. **Start Capturing on Your Active Network Interface**
+
+* Open **Wireshark** by typing the following command in your terminal:
+
+```bash
+wireshark
+```
+
+* Wireshark will launch, and you’ll see a list of available network interfaces. Select the one you're actively using (e.g., `eth0` for wired, `wlan0` for wireless).
+* Click on the interface to start capturing packets. The packets will begin to be displayed in real-time.
+
+---
+
+## 3. **Browse a Website or Ping a Server to Generate Traffic**
+
+To generate traffic that Wireshark can capture:
+
+* **Option 1**: Open a web browser (e.g., Firefox or Chrome) and visit any website like `https://www.google.com`.
+* **Option 2**: Open a **Terminal** and run the following command to ping a server:
+
+```bash
+ping google.com
+```
+
+Wireshark will start capturing packets as soon as you generate network traffic.
+
+---
+
+## 4. **Stop Capture After a Minute**
+
+After approximately **60 seconds**, click the **Stop** button (the red square icon) in Wireshark to stop capturing packets.
+
+---
+
+## 5. **Filter Captured Packets by Protocol (e.g., HTTP, DNS, TCP)**
+
+You can filter packets based on their protocol to make the analysis easier.
+
+* **HTTP**: To view only HTTP traffic, type `http` in the filter bar and press **Enter**.
+* **DNS**: To see DNS traffic, type `dns` and press **Enter**.
+* **TCP**: To filter only TCP packets, type `tcp` and press **Enter**.
+
+---
+
+## 6. **Identify at Least 3 Different Protocols in the Capture**
+
+In the captured packets, identify at least three different protocols. Some examples include:
+
+* **HTTP** (Hypertext Transfer Protocol): Used for web browsing (requests and responses between the client and server).
+* **DNS** (Domain Name System): Resolves domain names (e.g., `google.com`) to IP addresses.
+* **TCP** (Transmission Control Protocol): Handles communication between devices on the network (e.g., TCP handshakes).
+* **ARP** (Address Resolution Protocol): Resolves IP addresses to MAC addresses in a local network.
+* **ICMP** (Internet Control Message Protocol): Used for ping requests and error messages.
+
+Click on the individual packets in Wireshark to view detailed information about the source, destination, and protocol.
+
+---
+
+## 7. **Export the Capture as a `.pcap` File**
+
+To save the packet capture:
+
+* Go to **File > Save As** in Wireshark.
+* Choose a location to save the file and give it a `.pcap` extension (e.g., `capture.pcap`).
+* Click **Save**.
+
+---
+
+## 8. **Summarize Your Findings and Packet Details**
+
+Here’s an example summary of your capture and analysis:
+
+### Example Summary:
+
+```
+In the Wireshark capture, I identified three main protocols: HTTP, DNS, and TCP.
+
+- **HTTP**: The capture showed HTTP GET requests and HTTP 200 OK responses when browsing the website `google.com`.
+- **DNS**: DNS queries and responses were observed when resolving `google.com` to its corresponding IP address.
+- **TCP**: TCP packets were used to establish and manage connections between the client and the server, including TCP three-way handshakes (SYN, SYN-ACK, ACK).
+
+The packet capture has been saved as a `.pcap` file for further analysis and submission.
+```
+
+---
+
+## Final Steps:
+
+1. **Submit** the `.pcap` file that you saved earlier.
+2. **Write and submit** your summary of the capture and the identified protocols.
+
+---
