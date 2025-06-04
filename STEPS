@@ -8,7 +8,6 @@ This guide walks through the steps to capture network traffic using **Wireshark*
 
 Since **Wireshark** is **pre-installed** on Kali Linux, there's no need to install it. If it's not already installed for some reason, you can install it by running the following commands:
 
-```bash
 sudo apt update
 sudo apt install wireshark
 ````
@@ -19,9 +18,8 @@ If Wireshark is already installed, skip this step.
 
 ## 2. **Start Capturing on Your Active Network Interface**
 
-* Open **Wireshark** by typing the following command in your terminal:
+* Open **Wireshark** by typing the following command in your terminal
 
-```bash
 wireshark
 ```
 
@@ -37,7 +35,6 @@ To generate traffic that Wireshark can capture:
 * **Option 1**: Open a web browser (e.g., Firefox or Chrome) and visit any website like `https://www.google.com`.
 * **Option 2**: Open a **Terminal** and run the following command to ping a server:
 
-```bash
 ping google.com
 ```
 
